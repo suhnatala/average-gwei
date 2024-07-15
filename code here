@@ -1,0 +1,18 @@
+import pandas as pd
+
+# Load the gas price data
+df = pd.read_csv('gas_prices.csv')
+
+# Convert the 'date' column to datetime
+df['date'] = pd.to_datetime(df['date'])
+
+# Filter data for the specified period
+start_date = '2024-01-01'
+end_date = '2024-07-15'
+mask = (df['date'] >= start_date) & (df['date'] <= end_date)
+filtered_df = df.loc[mask]
+
+# Calculate the average gas price
+average_gwei = filtered_df['gwei'].mean()
+
+print(f'The average gwei from {start_date} to {end_date} is: {average_gwei}')
