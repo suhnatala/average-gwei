@@ -1,4 +1,3 @@
-# average-gwei
 
 Steps to Use the Code:
 Prepare the Data: Ensure you have a CSV file gas_prices.csv with the historical gas prices, where the date column contains dates in the format YYYY-MM-DD and the gwei column contains gas prices in gwei.
