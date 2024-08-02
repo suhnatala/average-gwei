@@ -16,3 +16,4 @@ filtered_df = df.loc[mask]
 average_gwei = filtered_df['gwei'].mean()
 
 print(f'The average gwei from {start_date} to {end_date} is: {average_gwei}')
+# end.
